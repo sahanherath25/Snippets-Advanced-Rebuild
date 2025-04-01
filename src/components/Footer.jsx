@@ -5,7 +5,7 @@ import Link from "next/link";
 function Footer() {
  return (
      <footer>
-         <Box sx={{ backgroundColor: "#333", color: "white", padding: 3, textAlign: "center" }}>
+         <Box sx={{ backgroundColor: "#210F37", color: "white", padding: 3, textAlign: "center" }}>
              <Typography variant="body2">
                  &copy; {new Date().getFullYear()} Code Snippets. All Rights Reserved.
              </Typography>

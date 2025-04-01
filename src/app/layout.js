@@ -19,7 +19,9 @@ export default function RootLayout({children}) {
         <AppRouterCacheProvider>
             <ThemeProvider theme={theme}>
                 <Header/>
-                {children}
+                <main className={"flex-grow-1 flex"}>
+                    {children}
+                </main>
                 <Footer/>
             </ThemeProvider>
         </AppRouterCacheProvider>
