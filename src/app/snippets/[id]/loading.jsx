@@ -1,9 +1,10 @@
 import React from 'react';
+import {CircularProgress} from "@mui/material";
 
 function LoadingPage() {
  return (
-  <div>
-      <h3>Loading Your Data Sir ....</h3>
+  <div className={"flex-grow-1 flex  justify-center items-center"}>
+      <CircularProgress color="success" />
   </div>
  );}
 

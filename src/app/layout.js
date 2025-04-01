@@ -14,7 +14,7 @@ export default function RootLayout({children}) {
     return (
         <html lang="en">
         <body
-            className={``}
+            className={`flex flex-col min-h-screen`}
         >
         <AppRouterCacheProvider>
             <ThemeProvider theme={theme}>

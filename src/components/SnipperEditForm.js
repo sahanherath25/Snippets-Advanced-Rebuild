@@ -19,7 +19,6 @@ function SnippetEditForm({data}) {
     // TODO Client Component
     return (
         <Box component={"form"} action={handleFormSubmit}>
-            <h2> THis is a Client Component rendered on Server</h2>
             
             <h3>{data.title}</h3>
             <Input name={"title"} value={data.title}  />

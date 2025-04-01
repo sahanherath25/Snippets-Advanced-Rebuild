@@ -13,8 +13,7 @@ async function SnippetEditPage({params}) {
     // if(!snippet) return notFound()
     // TODO Load Data in Server Component
     return (
-
-        <div>
+        <div className={"flex-grow-1"}>
             <h2>You are now on Edit Page</h2>
             {/*TODO Client Component*/}
             <SnippetEditForm data={snippet}/>

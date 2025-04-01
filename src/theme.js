@@ -15,8 +15,9 @@ import {createTheme} from "@mui/material/styles";
             secondary:"#9c27b0",
         },
         background:{
-            default: "#f5f5f5", // Background color of app
-            paper: "#ffffff", // Color of paper elements (cards, dialogs)
+            purple: "#210F37", // Background color of app
+            paper: "#ffffff",
+            // Color of paper elements (cards, dialogs)
         },
         typography: {
             fontFamily: "'Roboto', sans-serif",
@@ -45,6 +46,13 @@ import {createTheme} from "@mui/material/styles";
                 xl: 1920, // Extra large screens
             },
         },
+        buttons:{
+            purple: "#210F37",
+            lightPurple: "#522546",
+            lightPink: "#E69DB8",
+            lightRed: "#B03052",
+
+        }
     },
 });
 

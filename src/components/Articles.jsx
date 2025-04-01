@@ -1,5 +1,16 @@
 import React from 'react';
-import {Box, List, ListItemButton, ListItemText} from "@mui/material";
+import {
+    Box,
+    Button,
+    Card,
+    CardContent,
+    CardMedia,
+    Grid,
+    List,
+    ListItemButton,
+    ListItemText,
+    Typography
+} from "@mui/material";
 import Link from "next/link";
 
 function Articles({data}) {
@@ -8,16 +19,47 @@ function Articles({data}) {
     if (!data) return null;
 
     return (
-        <Box  sx={{color:"black"}} >
-            <List component="nav" sx={{color:"black"}}>
+
+        <Box  sx={{ padding: 4 }}>
+            <Typography variant="h4" gutterBottom>
+                All Code Snippets
+            </Typography>
+            <Grid container spacing={4}>
                 {data.map((item,index)=>{
                     return(
-                        <Link href={`/snippets/${item.id}` } key={index}><h3 >{item.title}</h3></Link>
+                        <Grid item key={item.id} xs={12} sm={6} md={4}>
+                            <Card sx={{ maxWidth: 345 ,minWidth:400}}>
+                                {/*<CardMedia*/}
+                                {/*    component="img"*/}
+                                {/*    height="140"*/}
+                                {/*    image={snippet.thumbnail || "/default-thumbnail.jpg"} // Replace with snippet thumbnail URL*/}
+                                {/*    alt="Snippet Thumbnail"*/}
+                                {/*/>*/}
 
+                                <CardContent>
+                                    <Typography variant="h6">{item.title}</Typography>
+                                    <Typography variant="body2" color="text.secondary" noWrap>
+                                        {item.code || "No description available"} {/* Display description */}
+                                    </Typography>
+                                </CardContent>
+
+                                <Button
+                                    size="small"
+                                    component="a"
+                                    href={`/snippets/${item.id}`} // Link to the detailed view page of the snippet
+                                    sx={{ margin: 1 }}
+                                >
+                                    View Snippet
+                                </Button>
+
+                            </Card>
+                        </Grid>
                     )
                 })}
-            </List>
+            </Grid>
         </Box>
+
+
     )
         ;
 }
