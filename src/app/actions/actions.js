@@ -75,7 +75,7 @@ export const deleteSnippet=async (id)=>{
 
         console.log("Error Occured",e.message)
     }
-    revalidatePath(`/snippets`)
+    revalidatePath(`/snippets/${id}`)
     redirect(`/snippets`)
 
 }

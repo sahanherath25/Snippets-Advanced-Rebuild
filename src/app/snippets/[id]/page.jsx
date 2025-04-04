@@ -7,7 +7,7 @@ import {Box, Button, Card, CardActions, CardContent, CardMedia, Typography} from
 import * as actions  from "@/app/actions/actions"
 import prisma    from "../../../../prisma";
 
-export const dynamic = "force-dynamic";
+// export const dynamic = "force-dynamic";
 
 export async function ViewSnippetPage({params, searchParams}) {
 
@@ -61,11 +61,15 @@ export async function generateStaticParams(){
 // TODO    Need to return an Object with id
 //     Fetch all different snippets fro mDB and  return object
     const snippets=await prisma.snippet.findMany({})
-    // console.log("Fetched snippets:", snippets);
+    console.log("Fetched snippets:", snippets);
+
     return snippets.map((snippet)=>{
         return {id:snippet.id}
     })
 }
+
+
+
 
 export default ViewSnippetPage
 
